@@ -9,6 +9,7 @@ const int analog_out_1=0;//add relevant data
 const int analog_out_2=0;//add relevant data
 const int kp=0,kd=0,ki=0;//add relevant data
 const float slope=0;//add relevant data
+
 int mapped_value;
 float goal;
 float scaling_factor=0;//add relevant data
@@ -76,6 +77,7 @@ void loop()
   cost=kp*proportional+ki*integral+kd*differential;
   cost*=scaling_factor;
   int_cost=clip(abs(cost));
+  
   if(cost>0)
   {
     // clockwise rotation this could be different later 
@@ -83,7 +85,7 @@ void loop()
     analogWrite(analog_out_2,0);
     
   }
-  if(cost>0)
+  if(cost<0)
   {
     // anti-clockwise rotation this could be different later 
     analogWrite(analog_out_2,int_cost);
