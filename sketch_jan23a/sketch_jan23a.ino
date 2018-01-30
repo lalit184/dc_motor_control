@@ -32,9 +32,16 @@ int map_val(int x)
   return y;
 }
 
+int map_val_general(int x)
+{
+  int y;
+  y=(x+1023-zero_bit_val)%1023;
+  return y;
+}
+
 int clip(int x)
 {
-  if(x>255)
+  if(x>150)                // you can change this as per requirement of smaller response time 
   {
     x=255;
   }
