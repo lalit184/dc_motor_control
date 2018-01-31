@@ -4,11 +4,11 @@ float previous_error=0;
 int current_val=0;
 const int zero_bit_val=0;// add relevant data
 
-const int analog_in=0;//add relevant data
-const int analog_out_1=0;//add relevant data
-const int analog_out_2=0;//add relevant data
+const int analog_in=A0;//add relevant data
+const int analog_out_1=A10;//add relevant data
+const int analog_out_2=A9;//add relevant data
 const int kp=0,kd=0,ki=0;//add relevant data
-const float slope=0;//add relevant data
+const float slope=360.0/1023.0;//add relevant data
 
 int mapped_value;
 float goal;
