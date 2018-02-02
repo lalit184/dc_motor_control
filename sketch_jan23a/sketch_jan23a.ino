@@ -5,8 +5,8 @@ int current_val=0;
 const int zero_bit_val=0;// add relevant data only if the apparatus is incorrectly callibrated
 
 const int analog_in=A0;//add relevant data
-const int analog_out_1=10;//add relevant data
-const int analog_out_2=9;//add relevant data
+const int analog_out_1=9;//add relevant data
+const int analog_out_2=10;//add relevant data
 const int kp=1,kd=1,ki=1;//add relevant data
 
 int mapped_value;
