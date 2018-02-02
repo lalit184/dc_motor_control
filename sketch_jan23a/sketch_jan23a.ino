@@ -10,7 +10,7 @@ const int kp=2.8,kd=14,ki=0.1;//control system constants
 
 int mapped_value; //remapping bitvalue if angle vs analog read is discontinuous 
 float goal; // always 180 degrees from current or +512 bits
-
+const int shift_angle=512;
 
 
 float cost;
@@ -47,7 +47,7 @@ void setup()
  pinMode(analog_out_1, OUTPUT);
  pinMode(analog_out_2, OUTPUT);
 
- goal=(mapped_value+512)%1023;
+ goal=(mapped_value+shift_angle)%1023;
   
 
 }
