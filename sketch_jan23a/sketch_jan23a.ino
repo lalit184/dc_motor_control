@@ -11,7 +11,8 @@ const int kp=2.8,kd=14,ki=0.1;//control system constants
 int mapped_value; //remapping bitvalue if angle vs analog read is discontinuous 
 float goal; // always 180 degrees from current or +512 bits
 const int shift_angle=512;
-
+ 
+int zero_bit_val;// add relevant data
 
 float cost;
 int int_cost; // (int)cost
